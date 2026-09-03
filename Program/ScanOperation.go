@@ -23,4 +23,11 @@ func main() {
 	//10 --> input
 	//10 --> output
 
+	var inputFloatValue float64
+	fmt.Scan(&inputFloatValue)
+	fmt.Println(inputFloatValue)
+
+	//Response:
+	//input --> 101.10
+	//output --> 101.1
 }
