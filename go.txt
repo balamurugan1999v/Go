@@ -1,0 +1,24 @@
+This document is about to refresh and understanding of Go language
+
+
+As a basic we need to understand the main in any programing language here also similar the code execution will be starting from the main method.
+Three points need to be considered
+    1. package main
+    2. import "fmt" --> Which will used for the build in functions like print and Scan
+    3. func main() --> This will be  the starting function.
+
+The file name should be end with .go extentions for go file
+the command for executing the file "go run filename"
+example:
+go run Helloworld.go
+
+Helloworld.go:
+    package main
+    import "fmt"
+    func main(){
+        fmt.Println("Helloworld")
+    }
+
+    Output:
+    Helloworld
+
