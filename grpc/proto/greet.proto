@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package greet;
+
+option go_package = "grpc-demo/proto";
+
+service GreetService {
+  rpc SayHello1 (HelloRequest) returns (HelloResponse);
+  rpc SayHello2 (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
