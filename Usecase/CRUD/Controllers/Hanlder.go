@@ -53,3 +53,14 @@ func healthCheck(context *gin.Context) {
 func getAPI(context *gin.Context) {
 	context.JSON(http.StatusOK, gin.H{"message": "Application able to server now"})
 }
+
+func deleteVehicle(context *gin.Context) {
+	var v Vehicle
+	context.ShouldBindJSON(&v)
+	for i, value := range vehicles {
+		if v.ID == value.ID {
+			vehicles = append(vehicles[:i], vehicles[i+1:]...)
+		}
+	}
+	context.JSON(http.StatusOK, gin.H{"message": "Vehicle deleted successfully!"})
+}

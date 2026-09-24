@@ -8,4 +8,5 @@ func Routers(server *gin.Engine) {
 	server.POST("/save", save)
 	server.GET("/getAllVehicles", getAllVehicles)
 	server.PUT("/updateVehicle", updateVehicle)
+	server.DELETE("/deleteVehicle", deleteVehicle)
 }
